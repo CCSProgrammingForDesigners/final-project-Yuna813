@@ -1,0 +1,17 @@
+body {
+    background-color: #222;
+}
+
+canvas {
+    background-color: #000;
+    display: block;
+    margin: 0 auto;
+    margin: calc(50vh - 250px - 5em) auto;
+}
+
+video,
+    {
+    margin-left: 100px;
+    margin-top: 35px;
+    position: absolute;
+}

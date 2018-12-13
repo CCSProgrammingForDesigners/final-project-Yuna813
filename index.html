@@ -5,45 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>color with camera</title>
+    <title>Test3</title>
+    <link rel="stylesheet" href="styles/application.css">
+    <script src="scripts/application.js" defer></script>
     <script src="scripts/tracking-min.js"> </script>
     <script src="scripts/data/eye-min.js"></script>
     <script src="scripts/data/face-min.js"></script>
     <script src="scripts/data/mouth-min.js"></script>
-    <link rel="stylesheet" href="/styles/application.css">
-
-
-    <style>
-        video,
-        canvas {
-            margin-left: 100px;
-            margin-top: 35px;
-            position: absolute;
-        }
-    </style>
 </head>
 
 <body>
+    <canvas id="canvas"></canvas>
     <video id="myVideo" width="800" height="700" preload autoplay loop muted></video>
-    <script>
-        //const image = document.getElementById("image")
-        //console.log(image)
-        var colors = new tracking.ColorTracker(['magenta', 'cyan', 'yellow']);
-        colors.on('track', function (event) {
-            if (event.data.length === 0) {
-                // No colors were detected in this frame.
-            } else {
-                event.data.forEach(function (rect) {
-                    // rect.x, rect.y, rect.height, rect.width, rect.color
-                    console.log(rect)
-
-                });
-            }
-        });
-        tracking.track('#myVideo', colors, {
-            camera: true
-        });
-    </script>
 
 </body>
 
